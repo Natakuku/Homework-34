@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>ДЗ 30. Реалізувати подобу інтернет-магазину.</title>
+</head>
+
+<body>
+    <div class="categories">
+    </div>
+    <div class="products">
+    </div>
+    <div class="product-info">
+    </div>
+
+    <div class="order-form">
+        <h2>Оформлення замовлення</h2>
+        <form id="orderForm">
+            <label for="fullName">ПІБ покупця:</label>
+            <input type="text" id="fullName" name="fullName" required><br><br>
+
+            <label for="city">Місто:</label>
+            <select id="city" name="city" required>
+                <option value="" disabled selected>Оберіть місто</option>
+                <option value="Київ">Київ</option>
+                <option value="Харків">Харків</option>
+                <option value="Дніпро">Львів</option>
+                <option value="Одеса">Львів</option>
+                <option value="Львів">Львів</option>
+            </select><br><br>
+
+            <label for="delivery">Склад Нової пошти:</label>
+            <input type="text" id="delivery" name="delivery" required><br><br>
+
+            <label>Спосіб оплати:</label><br>
+            <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cashOnDelivery" required>
+            <label for="cashOnDelivery">Післяплата</label><br>
+            <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" required>
+            <label for="creditCard">Оплата банківською карткою</label><br><br>
+
+            <label for="quantity">Кількість продукції:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+            <label for="comment">Коментар до замовлення:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+
+            <button type="submit">Підтвердити замовлення</button>
+        </form>
+        <div id="error"></div>
+        <div id="orderInfo"></div>
+        <div class="order-confirmation">
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
